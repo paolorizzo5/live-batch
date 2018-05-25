@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  compression:
+    enabled: false
+logging:
+  file: target/logs/application.log
+  level:
+    root: INFO
+spring:
+  thymeleaf:
+    mode: HTML5
+    cache: false
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/betrobot
+    username: root
+    password: root

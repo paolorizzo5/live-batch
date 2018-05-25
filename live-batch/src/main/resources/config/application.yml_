@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+logging:
+  file: logs/application.log
+  level:
+    root: INFO
+spring:
+  thymeleaf:
+    mode: HTML5
+    cache: true    
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/betrobot
+    username: root
+    password: root
+mybatis:
+    type-aliases-package: com.paolorizzo.bettin.bet_bot.mappers
+    type-handlers-package: com.paolorizzo.bettin.bet_bot.typehandlers
+    configuration:
+        map-underscore-to-camel-case: true
+        default-fetch-size: 100
+        default-statement-timeout: 30
